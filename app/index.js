@@ -10,3 +10,9 @@ console.log(base);
 let basesuffix = path.basename("/foo/bar/baz/asdf/quux.html", ".html");
 // Returns: 'quux'
 console.log(basesuffix);
+console.log("PATH", process.env.PATH);
+// Prints: 'C:\Windows\system32;C:\Windows;C:\Program Files\node\'
+
+let delim = process.env.PATH.split(path.delimiter);
+// Returns ['C:\\Windows\\system32', 'C:\\Windows', 'C:\\Program Files\\node\\']
+console.log("delim", delim);
